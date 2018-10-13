@@ -66,7 +66,8 @@ var increment = 0;
 		lines.push(new Path.Line({
 			segments: [[vh(x), vh(y)], [vh(x+1), vh(y)], [vh(x+1), vh(y+1)], [vh(x), vh(y+1)]],
 			closed: true,
-			fillColor: 'black'
+			fillColor: 'black',
+			strokeColor: 'black'
 		}));
 		if(increment<order.length-1){
 			increment++;
