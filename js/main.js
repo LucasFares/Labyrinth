@@ -4,7 +4,6 @@ function matrix(rows, cols) {
 		arr.push([]);
 		arr[i].push(new Array(cols));
 		for (var j = 0; j < cols; j++) {
-			// Initializes:
 			arr[i][j] = true;
 		}
 	}
