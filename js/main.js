@@ -4,7 +4,6 @@ function matrix(rows, cols) {
 		arr.push([]);
 		arr[i].push(new Array(cols));
 		for (var j = 0; j < cols; j++) {
-			// Initializes:
 			arr[i][j] = true;
 		}
 	}
@@ -88,5 +87,21 @@ function onFrame(event) {
 
 view.onResize = function(event) {
 	paper.project.clear();
-	init();
+	lines = [];
+	for (var i = 0; i < increment; i++) {
+		x = order[i][0];
+		y = order[i][1];
+		
+		lines.push(new Path.Line({
+			segments: [
+				[vh(x), vh(y)],
+				[vh(x + 1), vh(y)],
+				[vh(x + 1), vh(y + 1)],
+				[vh(x), vh(y + 1)]
+			],
+			closed: true,
+			fillColor: 'black',
+			strokeColor: 'black'
+		}));
+	}
 }
